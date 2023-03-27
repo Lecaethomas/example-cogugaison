@@ -1,0 +1,16 @@
+Enter these commands to install necessary dependencies
+> install.packages("installr")
+
+> installr::install.Rtools()
+
+> install.packages("devtools", type = "win.binary")
+
+> devtools::install_github("antuki/COGugaison")
+
+> install.packages('magrittr')
+
+> install.packages('dplyr')
+
+> install.packages('visNetwork')
+
+> install.packages('dplyr')
