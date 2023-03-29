@@ -6,14 +6,16 @@ library(magrittr) # needs to be run every time you start R and want to use %>%
 library(dplyr)    # alternatively, this also loads %>%
 library(readr)
 
-
+#SET PATHs
 year_geom_desired = 2020
-work_d = getwd()
-data_path = paste("../",work_d, "data")
-print(getwd())
-
-path_to_data = 'C:/_DEV/CODE/DIVERS/r/cogugaison/data'
-path_to_save = paste("C:/_DEV/CODE/DIVERS/r/cogugaison/output",sep='')
+file_path <- dirname(rstudioapi::getSourceEditorContext()$path)
+setwd(file_path)
+setwd("./../data")
+path_to_data = getwd()
+setwd(file_path)
+setwd("./../output")
+path_to_save = getwd()
+print(paste('data_path : ' , path_to_data, 'output_path : ', path_to_save))
 
 lst_files = list.files(path = path_to_data)
 
@@ -34,7 +36,6 @@ for (files in lst_files){
   Table['year_data'] = year_data
   # Save to csv
   write.csv(Table, file = paste(path_to_save, files, sep = '/') ,  row.names = FALSE)
-  
   print(paste0('Le fichier : ', files, ', a bien été enregistré'))
 }
 
