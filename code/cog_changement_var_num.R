@@ -6,13 +6,17 @@ library(magrittr) # needs to be run every time you start R and want to use %>%
 library(dplyr)    # alternatively, this also loads %>%
 library(readr)
 
-#SET PATHs
+
 year_geom_desired = 2020
+#SET PATHs
+# Get the location of the script file
 file_path <- dirname(rstudioapi::getSourceEditorContext()$path)
 setwd(file_path)
+# Get data/input path
 setwd("./../data")
 path_to_data = getwd()
 setwd(file_path)
+# Get output path
 setwd("./../output")
 path_to_save = getwd()
 print(paste('data_path : ' , path_to_data, 'output_path : ', path_to_save))
