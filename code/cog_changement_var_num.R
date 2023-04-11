@@ -52,4 +52,4 @@ df <- list.files(path=path_to_save, full.names = TRUE) %>%
 write.csv(df, file = paste(path_to_save, 'merged.csv', sep = '/'),  row.names = FALSE)
 
 ## Get a schema of town's administrative trajectory (need -> install.packages('visNetwork'))
-trajectoire_commune('49023', 2010)
+trajectoire_commune('02018', 2010)

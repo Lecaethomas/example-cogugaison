@@ -6,9 +6,9 @@ On utilise en particulier les fonctions ```changement_COG_varNum()``` (variables
 ### Variable numérique : 
 La situation type est que l'on souhaite évaluer un territoire (au regard d'une variable numérique) sur une période donnée. Au sein de ce territoire les communes évoluent, se fusionnent, se défusionnent. Afin de ne pas avoir à gérer cette problématique manuellement, le package, à l'aide de tables de passage de l'INSEE, permet de ramener vos tables décrivant une série temporelle vers une seule géographie sur laquelle vous souhaitez réaliser votre analyse.
 
-|![Alt text](./supports/illustrations/fusion.png "Exemple de fusion de 10 communes en 2015 pour former la commune de Beaupréeau (INSEE 49023) en 2016 (visuel produit à l'aide de la fonction trajectoire_commune() du package COGugaison)")|
+|![Alt text](./supports/illustrations/fusion_2.png "Exemple de fusion de 3 communes au 1er janvier 2019 pour former la commune de Anizy-le-Grand (INSEE 02018) (visuel produit à l'aide de la fonction trajectoire_commune() du package COGugaison)")|
 |:--:| 
-|*Exemple de fusion de 10 communes en 2015 pour former la commune de Beaupréeau (INSEE 49023) en 2016 (visuel produit à l'aide de la fonction trajectoire_commune() du package COGugaison)*|
+|*Exemple de fusion de 3 communes au 1er janvier 2019 pour former la commune de Anizy-le-Grand (INSEE 02018) (visuel produit à l'aide de la fonction trajectoire_commune() du package COGugaison)*|
 
 En cas de fusion, la fonction additionne les observations des communes concernées.
 En cas de défusion, elle pondère la variable en fonction du nombre d'habitants.
@@ -20,4 +20,3 @@ Pour une raison ou pour une autre on peut avoir besoin de "cogugaisonner" une ty
 - ```methode_classe_absorbee``` : ne pas tenir compte de cette classe dite "absorbée" pour toute commune fusionnée contenant au moins une ancienne commune appartenant à cette classe absorbée
 -  ```methode_classe_fusion``` : pour toutes les communes qui ont fusionné entre 2 dates indiquer comme classe la valeur inscrite dans "mot_fusion" y compris pour les fusions de communes de mêmes classes (sinon utiliser la méthode : "methode_difference")
 -...
-
