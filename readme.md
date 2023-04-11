@@ -20,3 +20,4 @@ Pour une raison ou pour une autre on peut avoir besoin de "cogugaisonner" une ty
 - ```methode_classe_absorbee``` : ne pas tenir compte de cette classe dite "absorbée" pour toute commune fusionnée contenant au moins une ancienne commune appartenant à cette classe absorbée
 -  ```methode_classe_fusion``` : pour toutes les communes qui ont fusionné entre 2 dates indiquer comme classe la valeur inscrite dans "mot_fusion" y compris pour les fusions de communes de mêmes classes (sinon utiliser la méthode : "methode_difference")
 -...
+
